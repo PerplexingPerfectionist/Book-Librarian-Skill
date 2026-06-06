@@ -5,7 +5,7 @@ description: "Manage reading life: recommend books, track reads, move wishlist t
 
 # Book Librarian
 
-Use when asked about books, reading recommendations, what to read next, or wants to update the reading tracker.
+Use when the user asks about books, reading recommendations, what to read next, or wants to update their reading tracker.
 
 ## Files
 
@@ -73,7 +73,7 @@ Use when asked about books, reading recommendations, what to read next, or wants
 ## Response Style
 
 - **NO SPOILERS.** Never reveal plot points, twists, endings, or character fates. Hooks and premise only.
-- Keep recommendations brief: title, author, one-line hook, why it fits
+- Keep recommendations brief: title, author, one-line hook, why it fits the user
 - Never recommend books already in either CSV
 - For mood-based picks, reference the mood explicitly ("Since you wanted something gothic...")
 - When updating CSVs, confirm the change with exact title/author
@@ -81,4 +81,4 @@ Use when asked about books, reading recommendations, what to read next, or wants
 
 ## Taste Drift
 
-If mentioned loving/hating a book outside the normal pattern, append a note to `library.md` taste profile. This is how the system learns.
+If the user mentions loving/hating a book outside the normal pattern, append a note to `library.md` taste profile. This is how the system learns.
