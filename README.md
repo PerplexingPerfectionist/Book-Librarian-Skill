@@ -42,8 +42,13 @@ The skill always checks what you already own before suggesting new purchases. Th
 ## Setup
 
 1. Copy the skill files to `~/.openclaw/workspace/skills/book-librarian/`
-2. Create the `books/` directory with the two CSV files (or let the skill create them)
-3. Start with `library.md` to build your taste profile
+2. The skill will **ask before creating anything** — no files are created without permission
+3. On first use, it creates `books/` directory, CSVs, and `memory/library.md` from the included template
+4. Optionally fill in your taste profile and mood map during setup, or let it learn over time
+
+## Template Files
+
+- `templates/library.md` — starter template for new users. Copied to `memory/library.md` on first setup. Keeps the SKILL.md context smaller.
 
 ## Example Taste Profile (library.md)
 

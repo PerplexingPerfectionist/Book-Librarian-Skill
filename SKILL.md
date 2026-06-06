@@ -7,11 +7,32 @@ description: "Manage reading life: recommend books, track reads, move wishlist t
 
 Use when the user asks about books, reading recommendations, what to read next, or wants to update their reading tracker.
 
+## Initialization
+
+**Only runs if files are missing.** Existing users skip this entirely.
+
+When ANY book-related trigger fires:
+1. Check if `books/books_library.csv` exists
+2. Check if `books/books_wishlist.csv` exists
+3. Check if `memory/library.md` exists
+4. If **any** are missing:
+   - Ask: *"Your reading tracker isn't set up yet. Want me to create it?"*
+   - If **no**: say *"No problem. Just ask again when you're ready."* and stop.
+   - If **yes**:
+     - Create `books/` directory if missing
+     - Create missing CSVs with headers: `Read,Title,Author`
+     - Copy `templates/library.md` to `memory/library.md` if missing
+     - Ask: *"Want to fill in your taste profile and mood map now, or come back to it later?"*
+     - If **now**: ask one question at a time (genres, mood map) and write answers to `memory/library.md`
+     - If **later**: say *"Got it. I'll use what I learn from your recommendations to fill it in over time."*
+5. Proceed with the triggered workflow.
+
 ## Files
 
 - `books/books_library.csv` — owned books. Columns: `Read` (Y/blank), `Title`, `Author`
 - `books/books_wishlist.csv` — wanted books. Columns: `Title`, `Author`
 - `memory/library.md` — taste profile, mood map, reading notes, patterns
+- `templates/library.md` — starter template for new users (copied to `memory/library.md` on init)
 
 ## Triggers
 
