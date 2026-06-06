@@ -62,4 +62,4 @@ The skill always checks what you already own before suggesting new purchases. Th
 
 ## License
 
-MIT
+Apache License 2.0
