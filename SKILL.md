@@ -1,5 +1,6 @@
 ---
 name: book-librarian
+version: 1.0.1
 description: "Manage reading life: recommend books, track reads, move wishlist to library, and suggest what to read next based on mood."
 ---
 
